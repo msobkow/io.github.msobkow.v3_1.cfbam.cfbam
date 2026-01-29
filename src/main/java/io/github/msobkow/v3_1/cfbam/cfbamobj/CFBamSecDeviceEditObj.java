@@ -417,18 +417,6 @@ public class CFBamSecDeviceEditObj
 	}
 
 	@Override
-	public String getOptionalPubKey() {
-		return( getSecDeviceRec().getOptionalPubKey() );
-	}
-
-	@Override
-	public void setOptionalPubKey( String value ) {
-		if( getSecDeviceRec().getOptionalPubKey() != value ) {
-			getSecDeviceRec().setOptionalPubKey( value );
-		}
-	}
-
-	@Override
 	public ICFSecSecUserObj getRequiredContainerSecUser() {
 		return( getRequiredContainerSecUser( false ) );
 	}
