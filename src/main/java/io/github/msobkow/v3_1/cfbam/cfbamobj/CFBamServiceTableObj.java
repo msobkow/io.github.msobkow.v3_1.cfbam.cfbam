@@ -704,14 +704,14 @@ public class CFBamServiceTableObj
 	}
 
 	@Override
-	public List<ICFSecServiceObj> readServiceByClusterIdx( long ClusterId )
+	public List<ICFSecServiceObj> readServiceByClusterIdx( CFLibDbKeyHash256 ClusterId )
 	{
 		return( readServiceByClusterIdx( ClusterId,
 			false ) );
 	}
 
 	@Override
-	public List<ICFSecServiceObj> readServiceByClusterIdx( long ClusterId,
+	public List<ICFSecServiceObj> readServiceByClusterIdx( CFLibDbKeyHash256 ClusterId,
 		boolean forceRead )
 	{
 		final String S_ProcName = "readServiceByClusterIdx";
@@ -983,7 +983,7 @@ public class CFBamServiceTableObj
 	}
 
 	@Override
-	public ICFSecServiceObj readServiceByUTypeIdx( long ClusterId,
+	public ICFSecServiceObj readServiceByUTypeIdx( CFLibDbKeyHash256 ClusterId,
 		CFLibDbKeyHash256 HostNodeId,
 		CFLibDbKeyHash256 ServiceTypeId )
 	{
@@ -994,7 +994,7 @@ public class CFBamServiceTableObj
 	}
 
 	@Override
-	public ICFSecServiceObj readServiceByUTypeIdx( long ClusterId,
+	public ICFSecServiceObj readServiceByUTypeIdx( CFLibDbKeyHash256 ClusterId,
 		CFLibDbKeyHash256 HostNodeId,
 		CFLibDbKeyHash256 ServiceTypeId, boolean forceRead )
 	{
@@ -1026,7 +1026,7 @@ public class CFBamServiceTableObj
 	}
 
 	@Override
-	public ICFSecServiceObj readServiceByUHostPortIdx( long ClusterId,
+	public ICFSecServiceObj readServiceByUHostPortIdx( CFLibDbKeyHash256 ClusterId,
 		CFLibDbKeyHash256 HostNodeId,
 		short HostPort )
 	{
@@ -1037,7 +1037,7 @@ public class CFBamServiceTableObj
 	}
 
 	@Override
-	public ICFSecServiceObj readServiceByUHostPortIdx( long ClusterId,
+	public ICFSecServiceObj readServiceByUHostPortIdx( CFLibDbKeyHash256 ClusterId,
 		CFLibDbKeyHash256 HostNodeId,
 		short HostPort, boolean forceRead )
 	{
@@ -1077,7 +1077,7 @@ public class CFBamServiceTableObj
 	}
 
 	@Override
-	public List<ICFSecServiceObj> readCachedServiceByClusterIdx( long ClusterId )
+	public List<ICFSecServiceObj> readCachedServiceByClusterIdx( CFLibDbKeyHash256 ClusterId )
 	{
 		final String S_ProcName = "readCachedServiceByClusterIdx";
 		ICFSecServiceByClusterIdxKey key = schema.getCFSecBackingStore().getFactoryService().newByClusterIdxKey();
@@ -1308,7 +1308,7 @@ public class CFBamServiceTableObj
 	}
 
 	@Override
-	public ICFSecServiceObj readCachedServiceByUTypeIdx( long ClusterId,
+	public ICFSecServiceObj readCachedServiceByUTypeIdx( CFLibDbKeyHash256 ClusterId,
 		CFLibDbKeyHash256 HostNodeId,
 		CFLibDbKeyHash256 ServiceTypeId )
 	{
@@ -1348,7 +1348,7 @@ public class CFBamServiceTableObj
 	}
 
 	@Override
-	public ICFSecServiceObj readCachedServiceByUHostPortIdx( long ClusterId,
+	public ICFSecServiceObj readCachedServiceByUHostPortIdx( CFLibDbKeyHash256 ClusterId,
 		CFLibDbKeyHash256 HostNodeId,
 		short HostPort )
 	{
@@ -1397,7 +1397,7 @@ public class CFBamServiceTableObj
 	}
 
 	@Override
-	public void deepDisposeServiceByClusterIdx( long ClusterId )
+	public void deepDisposeServiceByClusterIdx( CFLibDbKeyHash256 ClusterId )
 	{
 		final String S_ProcName = "deepDisposeServiceByClusterIdx";
 		ICFSecServiceObj obj;
@@ -1448,7 +1448,7 @@ public class CFBamServiceTableObj
 	}
 
 	@Override
-	public void deepDisposeServiceByUTypeIdx( long ClusterId,
+	public void deepDisposeServiceByUTypeIdx( CFLibDbKeyHash256 ClusterId,
 		CFLibDbKeyHash256 HostNodeId,
 		CFLibDbKeyHash256 ServiceTypeId )
 	{
@@ -1461,7 +1461,7 @@ public class CFBamServiceTableObj
 	}
 
 	@Override
-	public void deepDisposeServiceByUHostPortIdx( long ClusterId,
+	public void deepDisposeServiceByUHostPortIdx( CFLibDbKeyHash256 ClusterId,
 		CFLibDbKeyHash256 HostNodeId,
 		short HostPort )
 	{
@@ -1483,7 +1483,7 @@ public class CFBamServiceTableObj
 	 *		as identified by the key attributes, which may be an empty set.
 	 */
 	@Override
-	public List<ICFSecServiceObj> pageServiceByClusterIdx( long ClusterId,
+	public List<ICFSecServiceObj> pageServiceByClusterIdx( CFLibDbKeyHash256 ClusterId,
 		CFLibDbKeyHash256 priorServiceId )
 	{
 		final String S_ProcName = "pageServiceByClusterIdx";
@@ -1621,7 +1621,7 @@ public class CFBamServiceTableObj
 	}
 
 	@Override
-	public void deleteServiceByClusterIdx( long ClusterId )
+	public void deleteServiceByClusterIdx( CFLibDbKeyHash256 ClusterId )
 	{
 		ICFSecServiceByClusterIdxKey key = schema.getCFSecBackingStore().getFactoryService().newByClusterIdxKey();
 		key.setRequiredClusterId( ClusterId );
@@ -1723,7 +1723,7 @@ public class CFBamServiceTableObj
 	}
 
 	@Override
-	public void deleteServiceByUTypeIdx( long ClusterId,
+	public void deleteServiceByUTypeIdx( CFLibDbKeyHash256 ClusterId,
 		CFLibDbKeyHash256 HostNodeId,
 		CFLibDbKeyHash256 ServiceTypeId )
 	{
@@ -1756,7 +1756,7 @@ public class CFBamServiceTableObj
 	}
 
 	@Override
-	public void deleteServiceByUHostPortIdx( long ClusterId,
+	public void deleteServiceByUHostPortIdx( CFLibDbKeyHash256 ClusterId,
 		CFLibDbKeyHash256 HostNodeId,
 		short HostPort )
 	{

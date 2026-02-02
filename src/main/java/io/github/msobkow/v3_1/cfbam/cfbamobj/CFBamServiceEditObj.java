@@ -423,7 +423,7 @@ public class CFBamServiceEditObj
 	}
 
 	@Override
-	public long getRequiredClusterId() {
+	public CFLibDbKeyHash256 getRequiredClusterId() {
 		return( getServiceRec().getRequiredClusterId() );
 	}
 

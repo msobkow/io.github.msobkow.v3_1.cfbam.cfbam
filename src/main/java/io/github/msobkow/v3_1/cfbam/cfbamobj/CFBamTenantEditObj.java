@@ -425,7 +425,7 @@ public class CFBamTenantEditObj
 	}
 
 	@Override
-	public long getRequiredClusterId() {
+	public CFLibDbKeyHash256 getRequiredClusterId() {
 		return( getTenantRec().getRequiredClusterId() );
 	}
 

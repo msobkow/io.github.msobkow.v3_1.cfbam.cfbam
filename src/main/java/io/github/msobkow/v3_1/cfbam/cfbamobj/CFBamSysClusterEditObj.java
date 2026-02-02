@@ -356,7 +356,7 @@ public class CFBamSysClusterEditObj
 	}
 
 	@Override
-	public long getRequiredClusterId() {
+	public CFLibDbKeyHash256 getRequiredClusterId() {
 		return( getSysClusterRec().getRequiredClusterId() );
 	}
 

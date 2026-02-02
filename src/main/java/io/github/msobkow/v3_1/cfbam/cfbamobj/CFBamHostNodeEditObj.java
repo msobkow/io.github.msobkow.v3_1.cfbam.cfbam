@@ -414,7 +414,7 @@ public class CFBamHostNodeEditObj
 	}
 
 	@Override
-	public long getRequiredClusterId() {
+	public CFLibDbKeyHash256 getRequiredClusterId() {
 		return( getHostNodeRec().getRequiredClusterId() );
 	}
 
